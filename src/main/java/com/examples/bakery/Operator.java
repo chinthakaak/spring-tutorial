@@ -15,5 +15,8 @@ public class Operator {
 
         Bun bun = (Bun)context.getBean("bun");
         bun.bake();
+
+        CheeseCake cheeseCake=(CheeseCake)context.getBean("cheeseCake");
+        cheeseCake.bake();
     }
 }

@@ -8,8 +8,37 @@
     <bean class="com.examples.bakery.subitems.Sugar" id="sugar"/>
     <bean class="com.examples.bakery.Pizza" id="pizza">
         <constructor-arg ref="cheese"/>
+        <property name="prices">
+            <map>
+                <entry key="SMALL" value="200"/>
+                <entry key="MEDIUM" value="300"/>
+                <entry key="LARGE" value="500"/>
+            </map>
+        </property>
     </bean>
+
     <bean class="com.examples.bakery.Bun" id="bun">
         <property name="subItem" ref="sugar"/>
+        <property name="item" >
+            <bean class="com.examples.bakery.subitems.Plums"/>
+        </property>
+    </bean>
+
+    <!--<bean class="com.examples.bakery.CheeseCake" id="cheeseCake">-->
+        <!--<constructor-arg>-->
+            <!--<list>-->
+                <!--<ref bean="sugar"/>-->
+                <!--<ref bean="cheese"/>-->
+            <!--</list>-->
+        <!--</constructor-arg>-->
+    <!--</bean>-->
+
+    <bean class="com.examples.bakery.CheeseCake" id="cheeseCake">
+        <property name="subItems">
+            <list>
+                <ref bean="sugar"/>
+                <ref bean="cheese"/>
+            </list>
+        </property>
     </bean>
 </beans>

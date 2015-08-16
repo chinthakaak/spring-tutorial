@@ -8,6 +8,8 @@ import com.examples.bakery.subitems.*;
 public class Bun extends BakeryItems {
     private SubItem subItem;
 
+    private SubItem item;
+
     public Bun(SubItem subItem) {
         this.subItem = subItem;
     }
@@ -17,10 +19,14 @@ public class Bun extends BakeryItems {
 
     @Override
     void bake() {
-        System.out.println("Bun bakes with "+subItem.getName());
+        System.out.println("Bun bakes with "+subItem.getName()+" and "+item.getName());
     }
 
     public void setSubItem(SubItem subItem) {
         this.subItem = subItem;
+    }
+
+    public void setItem(SubItem item) {
+        this.item = item;
     }
 }
