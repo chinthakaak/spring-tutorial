@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd" >
+    <bean id="instrument" class="com.examples.auto.Piano" autowire-candidate="false"/>
+    <!--<bean id="flute" class="com.examples.auto.Flute"/>-->
+    <bean id="player1" class="com.examples.auto.InstrumentPlayer" autowire="byName"/>
+    <bean id="player2" class="com.examples.auto.InstrumentPlayer" autowire="byName"/>
+
+    <bean id="piano" class="com.examples.auto.Piano"/>
+
+    <bean id="flutePlayer" class="com.examples.auto.InstrumentPlayer" autowire="byType"/>
+
+    <bean id="pianoPlayer" class="com.examples.auto.StringPlayer" autowire="constructor"/>
+</beans>
