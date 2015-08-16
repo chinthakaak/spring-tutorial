@@ -2,5 +2,14 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd" >
+
     <bean class="com.examples.Hello" id="hello"/>
+    <bean class="com.examples.bakery.subitems.Cheese" id="cheese"/>
+    <bean class="com.examples.bakery.subitems.Sugar" id="sugar"/>
+    <bean class="com.examples.bakery.Pizza" id="pizza">
+        <constructor-arg ref="cheese"/>
+    </bean>
+    <bean class="com.examples.bakery.Bun" id="bun">
+        <property name="subItem" ref="sugar"/>
+    </bean>
 </beans>
