@@ -9,8 +9,10 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>spring-autowire</module>
+        <module>spring-autowire-basics</module>
         <module>spring-start</module>
+        <module>spring-autowire-xml</module>
+        <module>spring-autowire-java-config-noxml</module>
     </modules>
     <dependencies>
         <dependency>
